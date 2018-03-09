@@ -1,0 +1,117 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 3rem;
+  padding: 3rem;
+  color: #3b3a36;
+  background-color: #fff;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  line-height: 3.8rem;
+}
+
+.container {
+  display: grid;
+  width: 45rem;
+  position: relative;
+  margin: auto;
+  grid-template-areas: 'head'
+                       'form'
+                       'result';
+  grid-template-rows: 5rem  auto  auto;
+  grid-template-columns: auto;
+  grid-gap: 2rem;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: 'Roboto Slab', serif;
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+header {
+  grid-area: head;
+  text-align: center;
+}
+
+.formTransform {
+  grid-area: form;
+  text-align: center;
+  background-color: #c0dfd9;
+  padding: 2rem;
+  border-radius: 3px;
+}
+
+.resultField {
+  grid-area: result;
+  text-align: center;
+  background-color: #e9ece5;
+  border-radius: 3px;
+  padding: 2rem;
+  transition: 1s all;
+}
+
+.formTitle {
+  display: inline-block;
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.text {
+  margin: .5rem;
+  font-size: 2rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  border: 1px solid #b3c2bf;
+  font-size: 2rem;
+  height: 3.5rem;
+  width: 38rem;
+  font-family: inherit;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: .5rem;
+  font-size: 2rem;
+  width: 18rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  border: 1px solid #b3c2bf;
+  font-family: 'Roboto Slab', serif;
+  box-shadow: .2rem .2rem 1rem rgba(0, 0, 0, 0.1);
+  transition: 0.5s all;
+  background-color: #e9ece5;
+}
+
+.btn:hover {
+  box-shadow: .2rem .3rem 1rem rgba(0, 0, 0, 0.2);
+  background-color: #F5F8F0;
+}
+
+.btn:active {
+  box-shadow: .2rem .1rem .5rem rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+.resultTitle {
+  color: #b3c2bf;
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+#result {
+  margin: .5rem;
+}
+
+#error {
+  margin: .5rem;
+  color: #FF9888;
+}
